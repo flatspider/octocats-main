@@ -48,19 +48,24 @@ body {
 /* Below is the caption */
 
 
+/* This text align moves all caption items to the right */
+
 .image-footer {
     text-align: right;
-    border-bottom: 1px solid lightgray; 
+    border-bottom: 1px solid lightgray;
+    display: table-cell;
+    width: 440px;
 }
 
 .image-footer > * {
-    display: inline-block;
+    display: inline-block;  
 }
 
 .image-number {
     color: lightgray;
-    margin-right: 90px;
+    margin-right: 100px;
     /* Need this to be text-aligned: left; Apparently cannot override inherited value... */
+    vertical-align: top;
 }
 
 /* Keeps the author images horizontal to the text
@@ -79,14 +84,6 @@ body {
     content: "#";
  }
 
-/*
-.image-caption {
-    border: 5px yellow dashed;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-*/
-
  a {
     font-weight: bold;
     color: black;
@@ -95,6 +92,14 @@ body {
 
  span {
     color: gray;
+ }
+
+.image-caption > span {
+    vertical-align: top;
+ }
+
+ .image-caption > a {
+    vertical-align: top;
  }
 
 
