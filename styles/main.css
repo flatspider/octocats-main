@@ -49,26 +49,25 @@ body {
 
 
 .image-footer {
-    border: solid red 5px;
     text-align: right;
+    border-bottom: 1px solid lightgray; 
 }
 
 .image-footer > * {
     display: inline-block;
 }
 
-
-/*
-.image-caption {
-    margin-left: auto;
-    margin-right: 0;
-    text-align: right;
+.image-number {
+    color: lightgray;
+    margin-right: 90px;
+    /* Need this to be text-aligned: left; Apparently cannot override inherited value... */
 }
-*/
 
-
+/* Keeps the author images horizontal to the text
+     Negative margin left forces the by text closer */
 .authors {
     display: inline-block;
+    margin-left: -40px;
 }
 
 .authors img {
@@ -80,7 +79,6 @@ body {
     content: "#";
  }
 
-
 /*
 .image-caption {
     border: 5px yellow dashed;
@@ -89,18 +87,14 @@ body {
 }
 */
 
- .image-caption > * {
-    /*border: 5px yellow solid; */
-    margin-right: 0;
- }
-
-
  a {
     font-weight: bold;
     color: black;
     text-decoration: none;
  }
 
-.image-caption span {
-    margin-right: -10px;
-}
+ span {
+    color: gray;
+ }
+
+
