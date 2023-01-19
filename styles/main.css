@@ -1,14 +1,21 @@
-/* * { border: 1px solid black; } */
+ * { 
+    box-sizing: border-box;
+    border: 1px solid black; } 
 
 
 /* Removes the list style from the octocats. */
 ul {
     list-style: none;
+    /*padding: 0;*/
 }
 
 /* Selects all HTML elements to apply a font type. */
 html * {
-    font-family: Courier;
+    font-family: Courier, arial, sans-serif;
+}
+
+img {
+    width: 100%;
 }
 
 /* Sets the overall outer element width to the width of the screen. */
@@ -30,6 +37,7 @@ body {
 }
 
 .octocat {
+    /* Default was block display. */
     display:inline-block;
     width:auto;
     background:white;
@@ -63,7 +71,7 @@ body {
 
 .image-number {
     color: lightgray;
-    margin-right: 100px;
+    margin-right: 50px;
     /* Need this to be text-aligned: left; Apparently cannot override inherited value... */
     vertical-align: top;
 }
@@ -85,9 +93,25 @@ body {
  }
 
  a {
+    display: inline-block;
     font-weight: bold;
     color: black;
     text-decoration: none;
+    position: relative; /* This pairs with the gray triangle position absolute */
+ }
+
+
+ .octocat > a::after{
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 10px solid #CACACA;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute; /* This pairs with the parent position: relative */
+    top: 100%;
+    right: 1%;
+    
  }
 
  span {
